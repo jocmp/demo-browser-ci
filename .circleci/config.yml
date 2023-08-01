@@ -6,12 +6,10 @@ orbs:
 jobs:
   test:
     docker:
-      - image: cimg/node:20.4.0-browsers
+      - image: cimg/node:20.4.0
     steps:
       - browser-tools/install-browser-tools:
           chrome-version: 114.0.5735.198
-          install-geckodriver: false
-          install-firefox: false
       - browser-tools/install-chromedriver
       - run:
           name: "Verify Chrome Install"
